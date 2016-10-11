@@ -24,8 +24,10 @@ containing the product of the primes for the corresponding row and column.
 
 ## Usage
 `ruby lib/prime_multi_table.rb` prints out a multiplication table of the first 10 prime number.
+
 `ruby lib/prime_multi_table.rb 20` prints out a multiplication table of the first N prime number (where N = 20 in this case).
 
 ### RSpec Testing
 `bundle install` installs rspec gem.
+
 `be rspec` runs rspec.
