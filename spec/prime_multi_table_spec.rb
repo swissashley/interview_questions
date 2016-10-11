@@ -1,4 +1,3 @@
-require "rspec"
 require "prime_multi_table"
 
 describe "prime multiplication table functions" do
