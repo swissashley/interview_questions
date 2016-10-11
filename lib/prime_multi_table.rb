@@ -24,6 +24,7 @@ end
 # Check if a num is a prime
 def is_prime?(num)
   return false if num <= 1
+  return true if num == 2
   2.upto(Math.sqrt(num).ceil) {|i| return false if num % i == 0}
 end
 
