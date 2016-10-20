@@ -15,17 +15,20 @@ def n_primes(n)
   prime_arr = [2]
   num = 3
   while prime_arr.length < n
-    prime_arr << num if is_prime?(num)
+    prime_arr << num if is_prime?(num, prime_arr)
     num += 2
   end
   prime_arr
 end
 
 # Check if a num is a prime
-def is_prime?(num)
+def is_prime?(num, prime_arr)
   return false if num <= 1
   return true if num == 2
-  2.upto(Math.sqrt(num).ceil) {|i| return false if num % i == 0}
+  prime_arr.each do |prime|
+    return false if num % prime == 0
+  end
+  true
 end
 
 # Print out the multi table for the input array

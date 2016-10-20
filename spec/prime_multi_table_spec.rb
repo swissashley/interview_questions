@@ -1,16 +1,18 @@
 require "prime_multi_table"
+require 'prime'
 
 describe "prime multiplication table functions" do
 
   describe "#is_prime?" do
     it "checks if a number is a prime" do
-      expect(is_prime?(-1)).to be_falsey
-      expect(is_prime?(0)).to be_falsey
-      expect(is_prime?(1)).to be_falsey
-      expect(is_prime?(2)).to be_truthy
-      expect(is_prime?(3)).to be_truthy
-      expect(is_prime?(4)).to be_falsey
-      expect(is_prime?(5)).to be_truthy
+      # expect(is_prime?(-1)).to be_falsey
+      # expect(is_prime?(0)).to be_falsey
+      # expect(is_prime?(1)).to be_falsey
+      # expect(is_prime?(2)).to be_truthy
+      # expect(is_prime?(3)).to be_truthy
+      # expect(is_prime?(4)).to be_falsey
+      expect(is_prime?(5, [2,3])).to be_truthy
+      expect(is_prime?(100,Prime.first(100))).to be_falsey
     end
   end
 
